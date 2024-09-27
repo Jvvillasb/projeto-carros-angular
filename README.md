@@ -4,8 +4,6 @@ Projeto desenvolvido para exercitar os conhecimentos na linguagem Java utilizand
 
 No Front-end, foi construído utilizando Angular, visando principalmente aprender mais sobre esse framework.
 
-Currently, two official plugins are available:
-
 ## Instruções para Rodar (BACK-END)
 
 - 1°Passo: rodaremos o comando (git clone) no projeto, vamos importar o projeto Back-end, na IDE Java de sua preferência.
