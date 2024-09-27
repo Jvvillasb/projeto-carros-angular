@@ -1,0 +1,11 @@
+create table acessorio (id bigserial not null, nome varchar(255) not null, primary key (id));
+create table carro (id bigserial not null, marca_id bigint, nome varchar(255) not null, primary key (id));
+create table carro_acessorio (acessorios_id bigint not null, carro_id bigint not null);
+create table marca (id bigserial not null, nome varchar(255) not null, primary key (id));
+create table marca_carros (carros_id bigint not null unique, marca_id bigint not null);
+create table usuario (id bigserial not null, password varchar(255), role varchar(255), username varchar(255), primary key (id));
+alter table if exists carro add constraint FKrdimwbmemo9p4j5eaf6jws1ss foreign key (marca_id) references marca;
+alter table if exists carro_acessorio add constraint FKpkp86yclmuj0c7mrnoyihqonm foreign key (acessorios_id) references acessorio;
+alter table if exists carro_acessorio add constraint FK4swomvinge2sfppfkhgatdhw5 foreign key (carro_id) references carro;
+alter table if exists marca_carros add constraint FKe0ekog0b1nx5oyjea1ewld7iq foreign key (carros_id) references carro;
+alter table if exists marca_carros add constraint FK2wptacqcvwlrid1x0uhwykwa7 foreign key (marca_id) references marca;
